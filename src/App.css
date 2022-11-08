@@ -1,38 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #c6cd9c;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 2px;
+}
+
 .App {
-  text-align: center;
+  background-color: #598d94;
+  max-width: 500px;
+  margin: 10rem auto;
+  opacity: 0.9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* header style  */
+header {
+  padding: 3rem 3.5rem;
+  padding-bottom: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+
+  border-bottom: 1px solid white;
+  padding-bottom: 0.8rem;
+}
+.hedar-text {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.hedar-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.hedar-text span {
+  font-size: 0.8rem;
+  margin-left: 3px;
+}
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 2px;
+  margin-top: 6px;
+  outline: none;
+  color: white;
+}
+option {
+  color: white;
+  background-color: #598d94;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* todo list  */
+.todo_list {
+  margin: 3rem 0rem 1.5rem 0;
+}
+
+ul {
+  list-style: none;
+
+  padding: 0;
+}
+.todo li {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3.5rem;
+  font-size: 20px;
+  color: #ffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.icons svg {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.clear-all {
+  text-align: center;
+}
+.clear-all button {
+  margin-top: 0.5rem;
+  border: none;
+  margin-left: 5px;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: #164246;
+}
+
+.clear-all button:hover {
+  background: #0f3538;
+}
+
+/* form  */
+form {
+  padding: 0 3.5rem;
+  padding-bottom: 3.5rem;
+}
+form h2 {
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+form input {
+  border: none;
+  padding: 1.2rem 1rem;
+  background: white;
+  margin-top: 0.5rem;
+  width: 65%;
+}
+
+.form-btn {
+  border: none;
+  margin-left: 5px;
+  padding: 1.2rem 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: #164246;
+}
+.form-btn:hover {
+  background: #0f3538;
+}
+
+/* media quary  */
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 3rem 1.5rem 0rem;
   }
-  to {
-    transform: rotate(360deg);
+  .todo li {
+    padding: 1rem 1.5rem;
+  }
+  form {
+    padding: 0px 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+  form input {
+    width: 64%;
+    padding: 1rem;
+  }
+  .clear-all button {
+    font-size: 12px;
+    padding: 0.8rem;
+  }
+  .form-btn {
+    padding: 1rem 0.5rem;
+    font-size: 12px;
   }
 }
