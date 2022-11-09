@@ -1,6 +1,5 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
-import { MdOutlineFileDownloadDone } from "react-icons/md";
 import { RiFileEditFill } from "react-icons/ri";
 const Todo = ({ todo, todos, setTodos, setInputData, setEditedId, setToggleSubmit }) => {
   const deleteHandle = () => {
@@ -30,12 +29,11 @@ const Todo = ({ todo, todos, setTodos, setInputData, setEditedId, setToggleSubmi
 
   return (
     <div className="todo">
-      <li>
-        <div className="text_check">
+      <li  >
+        <div className="text_check" onClick={completeHandle}>
           <span className={todo.completed ? "done" : ""}>{todo.name}</span>
         </div>
         <div className="icons">
-          <MdOutlineFileDownloadDone onClick={completeHandle} />
           <AiFillDelete onClick={deleteHandle} />
           <RiFileEditFill onClick={editHandler} />
         </div>

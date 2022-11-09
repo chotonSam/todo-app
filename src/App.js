@@ -13,7 +13,7 @@ function App() {
     if (list) {
       return JSON.parse(list);
     } else {
-      return[];
+      return [];
     }
   };
 
@@ -44,24 +44,26 @@ function App() {
 
   return (
     <div className="App">
-      <Header status={status} setstatus={setstatus} />
-      <TodoList
-        todos={todos}
-        setTodos={setTodos}
-        filterdTodo={filterdTodo}
-        setInputData={setInputData}
-        setEditedId={setEditedId}
-        setToggleSubmit={setToggleSubmit}
-      />
-      <Form
-        inputData={inputData}
-        setInputData={setInputData}
-        todos={todos}
-        setTodos={setTodos}
-        editedId={editedId}
-        toggleSubmit={toggleSubmit}
-        setToggleSubmit={setToggleSubmit}
-      />
+      <main>
+        <Header status={status} setstatus={setstatus} />
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          filterdTodo={filterdTodo}
+          setInputData={setInputData}
+          setEditedId={setEditedId}
+          setToggleSubmit={setToggleSubmit}
+        />
+        <Form
+          inputData={inputData}
+          setInputData={setInputData}
+          todos={todos}
+          setTodos={setTodos}
+          editedId={editedId}
+          toggleSubmit={toggleSubmit}
+          setToggleSubmit={setToggleSubmit}
+        />
+        </main>
     </div>
   );
 }

@@ -9,10 +9,17 @@ body {
 }
 
 .App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
   background-color: #598d94;
-  max-width: 500px;
-  margin: 10rem auto;
   opacity: 0.9;
+  width: 500px;
+  box-shadow: -20px -20px 0px 0px rgb(100 100 100 / 10%);
 }
 
 h2 {
@@ -21,7 +28,7 @@ h2 {
 
 /* header style  */
 header {
-  padding: 3rem 3.5rem;
+  padding: 3rem 3rem;
   padding-bottom: 0px;
 }
 .header-container {
@@ -42,6 +49,9 @@ header {
 .hedar-text span {
   font-size: 0.8rem;
   margin-left: 3px;
+}
+.header-filter {
+  margin-top: 5px;
 }
 select {
   background: transparent;
@@ -64,17 +74,22 @@ option {
 
 ul {
   list-style: none;
-
   padding: 0;
 }
 .todo li {
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3.5rem;
+  padding: 1rem 3rem;
   font-size: 20px;
   color: #ffff;
   background: rgba(255, 255, 255, 0.1);
+}
+.text_check {
+  cursor: pointer;
+}
+.icons {
+  display: flex;
 }
 .icons svg {
   margin-left: 5px;
@@ -105,8 +120,8 @@ ul {
 
 /* form  */
 form {
-  padding: 0 3.5rem;
-  padding-bottom: 3.5rem;
+  padding: 0 3rem;
+  padding-bottom: 3rem;
 }
 form h2 {
   font-size: 1rem;
@@ -136,7 +151,12 @@ form input {
 
 /* media quary  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
+  main {
+    background-color: #598d94;
+    opacity: 0.9;
+    width: 100%;
+  }
   header {
     padding: 3rem 1.5rem 0rem;
   }
