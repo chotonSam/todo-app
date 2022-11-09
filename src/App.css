@@ -87,6 +87,7 @@ ul {
 }
 .text_check {
   cursor: pointer;
+  user-select: none;
 }
 .icons {
   display: flex;
