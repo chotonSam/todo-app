@@ -14,9 +14,9 @@ const Header = ({ setstatus,status }) => {
         </div>
         <div className="header-filter">
           <select value={status} onChange={filterHandler} name="filter">
+            <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
-            <option value="all">All</option>
           </select>
         </div>
       </div>
