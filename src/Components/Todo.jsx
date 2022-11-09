@@ -29,8 +29,8 @@ const Todo = ({ todo, todos, setTodos, setInputData, setEditedId, setToggleSubmi
 
   return (
     <div className="todo">
-      <li  >
-        <div className="text_check" onClick={completeHandle}>
+      <li onClick={completeHandle}>
+        <div className="text_check" >
           <span className={todo.completed ? "done" : ""}>{todo.name}</span>
         </div>
         <div className="icons">
