@@ -73,6 +73,8 @@ option {
 }
 
 ul {
+  height: 248px;
+  overflow: auto;
   list-style: none;
   padding: 0;
 }
